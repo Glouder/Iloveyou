@@ -251,8 +251,8 @@
          	};
             setInterval(_play, rate);
         }();
-	    
-	    function audioAutoPlay(id) { 
+    }
+     function audioAutoPlay(id) { 
     var audio = document.getElementById(id), 
     play = function () { 
         audio.play(); 
@@ -268,9 +268,7 @@
     document.addEventListener("touchstart", play, false); 
 } 
 
-audioAutoPlay('music-audio');
-
-    });
+audioAutoPlay('music-audio'););
     </script>
 </body>
 
