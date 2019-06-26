@@ -195,6 +195,7 @@
     $(function() {
         //设置起始日期
         countTime('2016/12/26 13:14', 'day', 'hour', 'minute', 'second');
+	audioAutoPlay('music-audio');
         var days = $('#day').text();
 
         // 设置标题
@@ -251,24 +252,7 @@
          	};
             setInterval(_play, rate);
         }();
-    }
-     function audioAutoPlay(id) { 
-    var audio = document.getElementById(id), 
-    play = function () { 
-        audio.play(); 
-        document.removeEventListener("touchstart", play, false); 
-    }; 
-    audio.play(); 
-    document.addEventListener("WeixinJSBridgeReady", function () { 
-        play(); 
-    }, false); 
-    document.addEventListener('YixinJSBridgeReady', function () { 
-        play(); 
-    }, false); 
-    document.addEventListener("touchstart", play, false); 
-} 
-
-audioAutoPlay('music-audio'););
+    });
     </script>
 </body>
 
